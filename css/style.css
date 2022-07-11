@@ -1,0 +1,134 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+:root {
+    --main-color: #a721cf;
+    --text-color: #171427;
+    --bg-color: #ffffff;
+}
+img{
+    width: 100%;
+}
+body{
+    color:var(--text-color);
+}
+.container{
+    /* max-width: 1068px; */
+    margin: auto;
+    width: 100%;
+}
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.logo{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+#logout-icon{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+/* Footer */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    color:#ffffff;
+    font-size: 0.9rem;
+    background: #171427;
+    padding: 10px;
+    text-align: center;
+}
+/* Main */
+main{
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.sidebar{
+    min-width: 180px;
+    max-width: 200px;
+    /* width: 15%; */
+    overflow: hidden;
+    align-self: stretch;
+}
+.sidebar ul{
+    position: relative;
+    top: 0;
+    left:0;
+    width: 100%;
+}
+.sidebar ul li{
+    width: 100%;
+}
+.sidebar ul li a{
+    color: var(--text-color);
+    display: block;
+    width: 100%;
+    display: flex;
+
+}
+.sidebar ul li a:hover{
+    background: var(--main-color);
+}
+.sidebar ul li a .icon{ 
+    min-width: 50px;
+    font-size: 25px;
+    display: block;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+}
+.sidebar ul li a .text{
+    display: block;
+    padding: 0 10px;
+    line-height: 50px;
+    height: 50px;
+    white-space: nowrap;
+}
+.sidebar ul li a:hover{
+    color:#ffffff
+}
+.sidebar ul li a.active{
+    border-left: 3px solid var(--main-color);
+}
+.sidebar ul li a.active:hover{
+    background: none;
+    color:var(--text-color)
+}
+.content{
+    background-color: blueviolet;
+    width: 100%;
+    align-self: stretch;
+}
