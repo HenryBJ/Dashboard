@@ -17,6 +17,7 @@
     --main-color: #a721cf;
     --text-color: #171427;
     --bg-color: #ffffff;
+    --text-color-alt:#f6f9fbd9;
 }
 img{
     width: 100%;
@@ -58,9 +59,9 @@ footer{
     bottom: 0;
     height: 40px;
     width: 100%;
-    color:#ffffff;
+    color:var(--bg-color);
     font-size: 0.9rem;
-    background: #171427;
+    background: var(--text-color);
     padding: 10px;
     text-align: center;
 }
@@ -74,16 +75,18 @@ main{
 .container{
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    /* column-gap: 20px; */
     height: 100%
 }
 .sidebar{
+    position: fixed;
     min-width: 180px;
     max-width: 200px;
     /* width: 15%; */
     overflow: hidden;
     align-self: stretch;
     box-shadow: 3px 0 4px hsl(0 4% 15% / 10%);
+    height: calc(100% - 110px);
     /* background-color: #a721cf; */
     
 }
@@ -133,6 +136,91 @@ main{
 }
 .content{
     /* background-color: blueviolet; */
+    margin-left: 180px;
     width: 100%;
-    align-self: stretch;
+    /* align-self: stretch; */
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+.item-content{
+    margin: 20px;
+    /* background-color: #a721cf; */
+    padding: 15px 30px;
+    /* border-radius: 4%; */
+    box-shadow: 5px 5px 3px hsl(0 7% 15% / 10%);
+    color: var(--bg-color);
+    /* border: var(--text-color) solid 1px; */
+    background: var(--bg-color);
+    transition: margin-top .4s ease;
+    cursor: pointer;
+    min-width: 180px;
+    min-height: 180px;
+    border-left: var(--main-color) solid 1px;
+    border-top: var(--main-color) solid 1px;
+}
+.item-content:hover{
+    margin-top:10px;
+}
+/* Service */
+.service-template{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 5px;
+    height: 100%;
+}
+.service-name{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.service-name span{
+    display: block;
+}
+.service-name small{
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+.service-category{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2;
+    text-align: center;
+}
+.service-ram-icon{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+}
+.service-cpu-icon{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
+.service-storage-icon{
+    grid-column: 3;
+    grid-row: 3;
+    text-align: center;
+}
+.service-ram{
+    grid-column: 1;
+    grid-row: 4;
+    text-align: center;
+}
+.service-cpu{
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+}
+.service-storage{
+    grid-column: 3;
+    grid-row: 4;
+    text-align: center;
+}
+
+
