@@ -82,6 +82,7 @@ main{
     /* width: 15%; */
     overflow: hidden;
     align-self: stretch;
+    
 }
 .sidebar ul{
     position: relative;
@@ -97,10 +98,12 @@ main{
     display: block;
     width: 100%;
     display: flex;
-
+    transition: margin-left .3s ease;
 }
-.sidebar ul li a:hover{
-    background: var(--main-color);
+.sidebar ul li a:hover:not(.active){
+    /* background: var(--main-color); */
+    margin-left: 5px;
+    border-left: 3px dotted var(--main-color);
 }
 .sidebar ul li a .icon{ 
     min-width: 50px;
@@ -117,9 +120,7 @@ main{
     height: 50px;
     white-space: nowrap;
 }
-.sidebar ul li a:hover{
-    color:#ffffff
-}
+
 .sidebar ul li a.active{
     border-left: 3px solid var(--main-color);
 }
